@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+using Common;
+
+namespace InvoiceParser
+{
+	public class InvoiceParser : IInvoiceParser
+	{
+		public IEnumerable<string> ParseInvoice(IEnumerable<string> input)
+		{
+			foreach (var code in input)
+            {
+                yield return "Parsed line: " + code;
+            }
+		}
+	}
+};
